@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+</head>
+<body>
+<img id="ảnh1" src="a1.jpg" alt="1"  onclick="img(this.id);check(this.id)" width="498" height="190"><br>
+<img id="ảnh2"src="f2.jpg" alt="2" onclick="img(this.id);check(this.id)" width="498" height="190"><br>
+<img id="ảnh3" src="m3.jpg" alt="3" onclick="img(this.id);check(this.id)" width="498" height="190">
+<script>
+    function img(val) {
+        let image=document.getElementById(val);
+        switch (image.alt) {
+            case "1":
+                image.src="f1.jpg";
+                image.alt="4";
+                break;
+            case "2":
+                image.src="f2.jpg";
+                image.alt="5";
+                break;
+            case "3":
+                image.src="f3.jpg";
+                image.alt="6";
+                break;
+            case"4":
+                image.src="m1.jpg";
+                image.alt="7";
+                break;
+            case"5":
+                image.src="m2.jpg";
+                image.alt="8";
+                break;
+            case"6":
+                image.src="m3.jpg";
+                image.alt="9";
+                break;
+            case"7":
+                image.src="a1.jpg";
+                image.alt="1";
+                break;
+            case"8":
+                image.src="a2.jpg";
+                image.alt="2";
+                break;
+            case"9":
+                image.src="a3.jpg";
+                image.alt="3";
+                break;
+
+        }
+    }
+    function check() {
+        let check1=document.getElementById("ảnh1");
+        let check2=document.getElementById("ảnh2");
+        let check3=document.getElementById("ảnh3");
+        if(check1.alt==="1" && check2.alt==="2" && check3.alt==="3" || check1.alt==="4" && check2.alt==="5" && check3.alt==="6" || check1.alt==="7" && check2.alt==="8" && check3.alt==="9" ){
+            alert("finish");
+        }
+
+    }
+</script>
+</body>
+</html>
